@@ -53,4 +53,13 @@
 	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\BurgerItemPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BurgerListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
