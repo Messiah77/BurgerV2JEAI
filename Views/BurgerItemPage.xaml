@@ -14,7 +14,7 @@
             <Label Text="Descripción"/>
             <Entry x:Name="DescB" Text="{Binding Description}"/>
 
-            <Label Text="¿Con queso extra?"/>
+            <Label Text="¿LLeva queso extra?"/>
             <CheckBox x:Name="Check"
                       IsChecked="{Binding WithExtraCheese}"
                       CheckedChanged="Check_CheckedChanged"/>

@@ -29,13 +29,13 @@ public partial class BurgerListPage : ContentPage
         {
             var burger = (Models.Burger)e.CurrentSelection[0];
 
-            string action = await DisplayActionSheet("Escoja una opción:", "Editar", "Borrar");
+            string action = await DisplayActionSheet("Escoja una opción:", "Modificar", "Eliminar");
 
-            if (action == "Editar")
+            if (action == "Modificar")
             {
                 await Shell.Current.GoToAsync($"{nameof(BurgerItemPage)}?{nameof(BurgerItemPage.ItemId)}={burger.ID}");
             }
-            else if (action == "Borrar")
+            else if (action == "Eliminar")
             {
                 App.BurgerRepo.DeleteBurger(burger);
                 LoadData();
