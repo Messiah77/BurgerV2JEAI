@@ -37,7 +37,7 @@ public partial class BurgerListPage : ContentPage
             }
             else if (action == "Borrar")
             {
-                App.BurguerRepo.DeleteBurguer(burger);
+                App.BurgerRepo.DeleteBurger(burger);
                 LoadData();
             }
             else

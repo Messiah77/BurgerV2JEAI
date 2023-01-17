@@ -28,35 +28,35 @@ namespace BurgerV2JEAI.Data
             conn.CreateTable<Burger>();
         }
 
-        public int AddNewBurguer(Burger burger)
+        public int AddNewBurger(Burger burger)
         {
             Init();
             int result = conn.Insert(burger);
             return result;
         }
 
-        public int UpadateBurguer(Burger burger)
+        public int UpadateBurger(Burger burger)
         {
             Init();
             int result = conn.Update(burger);
             return result;
         }
 
-        public int DeleteBurguer(Burger burger)
+        public int DeleteBurger(Burger burger)
         {
             Init();
             int result = conn.Delete(burger);
             return result;
         }
 
-        public List<Burger> GetAllBurguers()
+        public List<Burger> GetAllBurgers()
         {
             Init();
             List<Burger> burgers = conn.Table<Burger>().ToList();
             return burgers;
         }
 
-        public Burger GetBurguer(int id)
+        public Burger GetBurger(int id)
         {
             Burger B1 = new Burger();
             Init();

@@ -1,5 +1,4 @@
 using BurgerV2JEAI.Models;
-using BurgerV2JEAI.Views;
 
 namespace BurgerV2JEAI.Views;
 
