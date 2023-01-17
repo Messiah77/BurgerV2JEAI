@@ -63,7 +63,7 @@ namespace BurgerV2JEAI.Data
             List<Burger> burgers = conn.Table<Burger>().ToList();
             foreach (Burger B2 in burgers)
             {
-                if (hame.ID == id)
+                if (B2.ID == id)
                     B1 = B2;
             }
             return B1;
