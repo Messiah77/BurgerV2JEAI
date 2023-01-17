@@ -41,7 +41,7 @@ public partial class BurgerItemPage : ContentPage
         Item.Name = NameB.Text;
         Item.Description = DescB.Text;
         Item.WithExtraCheese = _flag;
-        if (SaveButton.Text == "Editar")
+        if (SaveButton.Text == "Guardar")
         {
             App.BurgerRepo.UpadateBurger(Item);
         }

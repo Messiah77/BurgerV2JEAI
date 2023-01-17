@@ -15,18 +15,15 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
-                        <Label Text="{Binding ID}"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
                         <StackLayout Grid.Column="1">
-                            <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                            <Label Text="{Binding Description}" TextColor="Gray" FontAttributes="Italic"/>
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Description}" FontSize="9"/>
                         </StackLayout>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Grid.Row="1" Text="Añadir nuevo registro"
+        <Button Grid.Row="1" Text="Añade una hamburguesa"
                 Clicked="OnItemAdded"
                 Margin="20"/>
     </Grid>
