@@ -1,4 +1,6 @@
-﻿namespace BurgerV2JEAI;
+﻿using BurgerV2JEAI.Data;
+
+namespace BurgerV2JEAI;
 
 public static class MauiProgram
 {
@@ -12,7 +14,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-
-		return builder.Build();
+        string dbPath = FileAccessHelper.GetLocalFilePath("burguer.db3");
+        builder.Services.AddSingleton<BurgerDatabase>(s => ActivatorUtilities.CreateInstance<BurgerDatabase>(s, dbPath));
+        return builder.Build();
 	}
 }
