@@ -29,7 +29,7 @@ public partial class BurgerListPage : ContentPage
         {
             var burger = (Models.Burger)e.CurrentSelection[0];
 
-            string action = await DisplayActionSheet("Escoja una opción:", null, "Editar", "Borrar");
+            string action = await DisplayActionSheet("Escoja una opción:", "Editar", "Borrar");
 
             if (action == "Editar")
             {
