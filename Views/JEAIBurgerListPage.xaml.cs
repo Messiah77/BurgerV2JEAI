@@ -31,11 +31,11 @@ public partial class JEAIBurgerListPage : ContentPage
 
             string action = await DisplayActionSheet("Escoja una opción:", "Modificar", "Eliminar");
 
-            if (action == "Editar")
+            if (action == "Modificar")
             {
                 await Shell.Current.GoToAsync($"{nameof(JEAIBurgerItemPage)}?{nameof(JEAIBurgerItemPage.ItemId)}={burger.ID}");
             }
-            else if (action == "Borrar")
+            else if (action == "Eliminar")
             {
                 App.BurgerRepo.DeleteBurger(burger);
                 LoadData();

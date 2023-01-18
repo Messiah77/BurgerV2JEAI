@@ -15,6 +15,9 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
+                        <Label Text="{Binding ID}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
                         <StackLayout Grid.Column="1">
                             <Label Text="{Binding Name}" />
                             <Label Text="{Binding Description}" FontSize="9"/>
