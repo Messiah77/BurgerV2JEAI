@@ -7,7 +7,7 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
 		InitializeComponent();
-        Routing.RegisterRoute(nameof(BurgerItemPage), typeof(BurgerItemPage));
-        Routing.RegisterRoute(nameof(BurgerListPage), typeof(BurgerListPage));
+        Routing.RegisterRoute(nameof(JEAIBurgerItemPage), typeof(JEAIBurgerItemPage));
+        Routing.RegisterRoute(nameof(JEAIBurgerListPage), typeof(JEAIBurgerListPage));
     }
 }

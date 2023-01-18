@@ -1,9 +1,9 @@
 using BurgerV2JEAI.Models;
 namespace BurgerV2JEAI.Views;
 
-public partial class BurgerListPage : ContentPage
+public partial class JEAIBurgerListPage : ContentPage
 {
-	public BurgerListPage()
+	public JEAIBurgerListPage()
 	{
 		InitializeComponent();
         LoadData();
@@ -16,26 +16,26 @@ public partial class BurgerListPage : ContentPage
 
     public void LoadData()
     {
-        List<Burger> burger = App.BurgerRepo.GetAllBurgers();
+        List<JEAIBurger> burger = App.BurgerRepo.GetAllBurgers();
         BurgerList.ItemsSource = burger;
     }
     async void OnItemAdded(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(BurgerItemPage));
+        await Shell.Current.GoToAsync(nameof(JEAIBurgerItemPage));
     }
     private async void BurgersCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (e.CurrentSelection.Count != 0)
         {
-            var burger = (Models.Burger)e.CurrentSelection[0];
+            var burger = (Models.JEAIBurger)e.CurrentSelection[0];
 
             string action = await DisplayActionSheet("Escoja una opción:", "Modificar", "Eliminar");
 
-            if (action == "Modificar")
+            if (action == "Editar")
             {
-                await Shell.Current.GoToAsync($"{nameof(BurgerItemPage)}?{nameof(BurgerItemPage.ItemId)}={burger.ID}");
+                await Shell.Current.GoToAsync($"{nameof(JEAIBurgerItemPage)}?{nameof(JEAIBurgerItemPage.ItemId)}={burger.ID}");
             }
-            else if (action == "Eliminar")
+            else if (action == "Borrar")
             {
                 App.BurgerRepo.DeleteBurger(burger);
                 LoadData();

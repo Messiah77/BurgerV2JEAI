@@ -9,12 +9,12 @@ using SQLite;
 namespace BurgerV2JEAI.Data
 {
     
-    public class BurgerDatabase
+    public class JEAIBurgerDatabase
     {
         string _dbPath;
         private SQLiteConnection conn;
 
-        public BurgerDatabase(string DatabasePath)
+        public JEAIBurgerDatabase(string DatabasePath)
         {
             _dbPath = DatabasePath;
         }
@@ -25,43 +25,43 @@ namespace BurgerV2JEAI.Data
                 return;
 
             conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<Burger>();
+            conn.CreateTable<JEAIBurger>();
         }
 
-        public int AddNewBurger(Burger burger)
+        public int AddNewBurger(JEAIBurger burger)
         {
             Init();
             int result = conn.Insert(burger);
             return result;
         }
 
-        public int UpadateBurger(Burger burger)
+        public int UpadateBurger(JEAIBurger burger)
         {
             Init();
             int result = conn.Update(burger);
             return result;
         }
 
-        public int DeleteBurger(Burger burger)
+        public int DeleteBurger(JEAIBurger burger)
         {
             Init();
             int result = conn.Delete(burger);
             return result;
         }
 
-        public List<Burger> GetAllBurgers()
+        public List<JEAIBurger> GetAllBurgers()
         {
             Init();
-            List<Burger> burgers = conn.Table<Burger>().ToList();
+            List<JEAIBurger> burgers = conn.Table<JEAIBurger>().ToList();
             return burgers;
         }
 
-        public Burger GetBurger(int id)
+        public JEAIBurger GetBurger(int id)
         {
-            Burger B1 = new Burger();
+            JEAIBurger B1 = new JEAIBurger();
             Init();
-            List<Burger> burgers = conn.Table<Burger>().ToList();
-            foreach (Burger B2 in burgers)
+            List<JEAIBurger> burgers = conn.Table<JEAIBurger>().ToList();
+            foreach (JEAIBurger B2 in burgers)
             {
                 if (B2.ID == id)
                     B1 = B2;

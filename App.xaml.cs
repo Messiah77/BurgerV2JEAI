@@ -4,8 +4,8 @@ namespace BurgerV2JEAI;
 
 public partial class App : Application
 {
-	public static BurgerDatabase BurgerRepo { get; set; }
-	public App(BurgerDatabase repo)
+	public static JEAIBurgerDatabase BurgerRepo { get; set; }
+	public App(JEAIBurgerDatabase repo)
 	{
 		InitializeComponent();
 

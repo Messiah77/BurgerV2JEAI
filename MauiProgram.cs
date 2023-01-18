@@ -15,7 +15,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
         string dbPath = FileAccessHelper.GetLocalFilePath("burguer.db3");
-        builder.Services.AddSingleton<BurgerDatabase>(s => ActivatorUtilities.CreateInstance<BurgerDatabase>(s, dbPath));
+        builder.Services.AddSingleton<JEAIBurgerDatabase>(s => ActivatorUtilities.CreateInstance<JEAIBurgerDatabase>(s, dbPath));
         return builder.Build();
 	}
 }

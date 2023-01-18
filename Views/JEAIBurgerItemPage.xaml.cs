@@ -4,11 +4,11 @@ namespace BurgerV2JEAI.Views;
 
 [QueryProperty(nameof(ItemId), nameof(ItemId))]
 
-public partial class BurgerItemPage : ContentPage
+public partial class JEAIBurgerItemPage : ContentPage
 {
-    Burger Item = new Burger();
+    JEAIBurger Item = new JEAIBurger();
     bool _flag;
-    public BurgerItemPage()
+    public JEAIBurgerItemPage()
 	{
 		InitializeComponent();
         LoadBurguer();
@@ -41,7 +41,7 @@ public partial class BurgerItemPage : ContentPage
         Item.Name = NameB.Text;
         Item.Description = DescB.Text;
         Item.WithExtraCheese = _flag;
-        if (SaveButton.Text == "Guardar")
+        if (SaveButton.Text == "Editar")
         {
             App.BurgerRepo.UpadateBurger(Item);
         }

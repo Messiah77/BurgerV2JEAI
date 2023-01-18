@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:BurgerV2JEAI.Models"
-             x:Class="BurgerV2JEAI.Views.BurgerListPage"
+             x:Class="BurgerV2JEAI.Views.JEAIBurgerListPage"
              Title="JEAI_BurgerListPage">
     <Grid RowDefinitions="*,Auto">
         <CollectionView x:Name="BurgerList"
                         SelectionMode="Single"
                         SelectionChanged="BurgersCollection_SelectionChanged">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Burger">
+                <DataTemplate x:DataType="models:JEAIBurger">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />

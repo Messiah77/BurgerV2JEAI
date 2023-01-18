@@ -10,7 +10,7 @@ namespace BurgerV2JEAI.Models
 {
     [Table("burger")]
 
-    public class Burger
+    public class JEAIBurger
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
