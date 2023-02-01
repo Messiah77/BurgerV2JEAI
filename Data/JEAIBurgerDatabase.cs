@@ -28,6 +28,7 @@ namespace BurgerV2JEAI.Data
             conn.CreateTable<JEAIBurger>();
         }
 
+       
         public int AddNewBurger(JEAIBurger burger)
         {
             Init();

@@ -8,6 +8,8 @@ using SQLite;
 
 namespace BurgerV2JEAI.Models
 {
+
+
     [Table("burger")]
 
     public class JEAIBurger
@@ -20,4 +22,5 @@ namespace BurgerV2JEAI.Models
         public string Description { get; set; }
         public bool WithExtraCheese { get; set; }
     }
+
 }

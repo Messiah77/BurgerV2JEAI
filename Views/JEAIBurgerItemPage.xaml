@@ -18,7 +18,6 @@
             <CheckBox x:Name="Check"
                       IsChecked="{Binding WithExtraCheese}"
                       CheckedChanged="Check_CheckedChanged"/>
-
             <Button x:Name ="SaveButton"
                     Text ="Guardar"
                     Clicked="OnSavedClicked"/>
